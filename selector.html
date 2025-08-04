@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selector Demo</title>
+    <link rel="stylesheet" href="./selector.css" />
+  </head>
+  <body>
+    <!-- ID selector  -->
+    <h1 id="heading">ID selector to blue</h1>
+    <div class="box" id="unique-box">
+      <!-- direct child selector -->
+      <h2>element direct child</h2>
+      <h3 class="child">class direct child</h3>
+      <span><h2>element not direct child</h2></span>
+      <span><h3 class="child">class not direct child</h3></span>
+      <!-- Element Selector -->
+      <p>p element selector change color to green</p>
+      <!-- simple class selector -->
+      <p class="simply">simply class selector to red</p>
+      <!-- Class Selectors -->
+      <div class="inner-box first-box">multiple classes</div>
+      <div class="inner-box">Inner Box 2</div>
+      <!-- Child Selector descendant -->
+      <ul class="list">
+        <li>ul li - element Descendant</li>
+        <ul>
+          <li>ul li - element Descendant all levels</li>
+          <li class="highlight">
+            ul.list li.highlight - class Descendant all level
+          </li>
+        </ul>
+        <li class="highlight">ul.list li.highlight - class Descendant</li>
+      </ul>
+
+      <!-- Attribute Selector -->
+      <input type="text" placeholder="attribute selector" />
+      <a href="#" class="link" title="Link Title">Link with title</a>
+      <!-- class direct Sibling Selector -->
+      <div class="box-sibling">class direct Sibling</div>
+      <a href="#">element direct sibling a</a>
+      <!-- Pseudo-Class Selector -->
+      <a href="#" class="pseudo-class-link">pseudo-class selector</a>
+    </div>
+    <!-- General Sibling Selector -->
+    <p class="general-sibling">class general sibling</p>
+    <h4>element general sibling</h4>
+    <h5>multiple element selection</h5>
+    <h6>multiple element selection</h6>
+    <p class="multiple1">multiple class selection</p>
+    <p class="multiple2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero culpa
+      tenetur quaerat odit hic delectus distinctio assumenda, nam, animi,
+      veritatis omnis dolore saepe nobis modi pariatur eaque dicta. Suscipit,
+      est.
+    </p>
+  </body>
+</html>

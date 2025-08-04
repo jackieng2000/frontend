@@ -1,0 +1,63 @@
+/* global settings */
+html {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+/* reset all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: #f1f1f1;
+  margin-top: 50px;
+}
+
+section {
+  background-color: #b5b3b3;
+  color: white;
+  text-align: center;
+  width: 50%;
+  margin: 0px auto;
+  padding: 65px 45px;
+  box-shadow: 5px 5px 3px 1px #b5b3b3;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+  margin: 20px;
+}
+
+form {
+  margin: 20px;
+}
+
+.form-group {
+  margin: 40px 0px;
+}
+input {
+  width: 80%;
+  padding: 15px 0px;
+}
+
+input[placeholder] {
+  font-size: 18px;
+  text-align: center;
+}
+
+button {
+  width: 80%;
+  padding: 15px 0px;
+  background: coral;
+  color: white;
+  border: 0px;
+  font-size: 18px;
+}

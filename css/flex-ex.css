@@ -1,0 +1,126 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* finished global settings */
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+header {
+  width: 100%;
+  background-color: coral;
+  padding: 5px 10px;
+}
+
+h1 {
+  color: #333;
+  text-transform: capitalize;
+}
+
+nav {
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+ul {
+  margin-top: 0;
+}
+ul.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px 0px 10px 10px;
+}
+.nav a {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: black;
+}
+
+.nav a:hover {
+  color: coral;
+}
+/* header setting is done ! */
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+article {
+  width: 70%;
+}
+aside {
+  width: 300px;
+}
+
+p {
+  font-size: 14px;
+}
+
+h3 {
+  background-color: coral;
+  color: white;
+  text-transform: capitalize;
+  padding: 5px;
+  margin-bottom: 0;
+}
+
+ul.post {
+  background-color: #f1f1f1;
+  padding-left: 3px;
+}
+
+.post li {
+  padding: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.post li a {
+  color: black;
+}
+.post li a:hover {
+  color: coral;
+}
+
+@media (max-width: 600px) {
+  main {
+    flex-direction: column-reverse;
+  }
+  article {
+    width: 95%;
+    margin: 0 auto;
+  }
+  aside {
+    width: 95%;
+    margin: 0 auto;
+  }
+  ul.nav {
+    flex-direction: column;
+  }
+  .post li {
+    padding: 10px 0;
+    text-align: center;
+  }
+}

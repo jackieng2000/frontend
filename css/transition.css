@@ -1,0 +1,113 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+  /* first timing is during, last timing is delay */
+  transition: background-color 0.8s ease-out 0.5s;
+  transition: width 1s ease-in-out 0.1s;
+}
+
+.btn:hover {
+  background-color: green;
+  color: yellow;
+  width: 400px;
+  border-radius: 50px;
+  opacity: 0.5;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  max-width: 60%;
+  transition: all 0.5s;
+}
+
+.logo:hover {
+  transform: rotate(-90deg);
+  transform: translateX(-200px);
+  transform: translateY(200px);
+  transform: translate(200px, 200px);
+  transform: skew(-30deg);
+  transform: scale(1.5);
+  transform: rotate(90deg) scale(2);
+}
+
+.card-container {
+  margin-top: 50px;
+  text-align: center;
+  perspective: 1000px;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.front {
+  background: #3498db;
+  color: #fff;
+  line-height: 300px;
+}
+.back {
+  background: #2ecc71;
+  color: #fff;
+  line-height: 300px;
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.btn-1 {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 20px;
+  background: cyan;
+  color: #333;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.dark {
+  background: #333;
+  color: #fff;
+}
+
+.yellow {
+  color: yellow;
+}

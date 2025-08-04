@@ -1,0 +1,20 @@
+html,
+body {
+  margin: 0; /* Reset html margin */
+  padding: 0; /* Reset html padding */
+  /* height: 100%; For percentage-based heights */
+}
+* {
+  box-sizing: border-box; /* Include padding in width calc */
+}
+
+html {
+  background-color: none;
+}
+body {
+  background-color: yellow;
+}
+main {
+  margin: 0;
+  /* background-color: #27254a; */
+}

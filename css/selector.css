@@ -1,0 +1,104 @@
+/* universal selector */
+* {
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+/* element selector */
+p {
+  color: #55eb14;
+}
+
+/* id selector */
+#heading {
+  color: rgba(137, 43, 226, 0.531);
+}
+
+#unique-box {
+  border: 2px solid hsl(125, 62%, 58%);
+}
+
+/* class selectors */
+.simply {
+  color: rgb(255, 145, 0);
+}
+
+.box {
+  background-color: #f9f9f9;
+}
+
+.inner-box {
+  border: 1px solid #ccc;
+}
+
+/* attribute selector */
+[type="text"] {
+  border: 2px solid #007bff;
+}
+
+/* Descendant Selector */
+/* element */
+ul li {
+  color: peru;
+}
+
+/* class */
+ul.list li.highlight {
+  color: red;
+}
+
+/* direct child with class */
+ul.list > li {
+  color: green;
+}
+
+/* direct child with element */
+div > h2 {
+  color: purple;
+}
+
+.box > .child {
+  color: blue;
+}
+
+.inner-box.first-box {
+  border: 3px solid rgb(0, 242, 255);
+}
+
+/* multiple elements */
+h5,
+h6 {
+  color: cyan;
+}
+
+/* multiple classes */
+.multiple1,
+.multiple2 {
+  color: rgb(255, 0, 238);
+}
+
+/* adjacent sibling Selector */
+div + a {
+  color: gold;
+}
+
+.link + .box-sibling {
+  background-color: lightcoral;
+}
+
+.box ~ .general-sibling {
+  color: #eaf610;
+  font-style: italic;
+}
+
+h1 ~ h4 {
+  color: brown;
+}
+
+.pseudo-class-link:hover {
+  color: #ff5733;
+  text-decoration: dashed;
+}
+
+p::first-line {
+  background-color: #5ce8c3;
+}

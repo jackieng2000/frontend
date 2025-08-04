@@ -1,0 +1,51 @@
+.container {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  animation: spin 2s linear infinite;
+  border: 1px solid red;
+}
+.box::before,
+.box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 35px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: cyan;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.box::after {
+  left: -35px;
+  background: coral;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+}
