@@ -119,3 +119,18 @@ img {
         width: 80%;
     } 
 }
+
+.hidden {
+    display: none;
+}
+
+.card {
+    background: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.dark {
+    background: #333;
+    color: #fff;
+}
