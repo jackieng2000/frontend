@@ -59,7 +59,81 @@ const onKeyDown = e=> {
     if (e.shiftKey && e.key === "k")
      console.log("you pressed shift and K");
 }
-
-
 itemInput.addEventListener("keydown", onKeyDown);
+//===============================================================
+// input events can be used to update the DOM
+const itemInput2 = document.getElementById("item-input");
+const priorityInput = document.getElementById("priority-input");
+const checkbox = document.getElementById("checkbox");
+const heading = document.querySelector("h1");
+function onInput(e) {
+    heading.textContent = e.target.value;
+}
+
+itemInput2.addEventListener("input",onInput);
+
+// checkbox 
+function onChecked(e) {
+    isChecked = e.target.Checked;
+    console.log(isChecked);
+    heading.textContent = isChecked ? "checked" : "not checked";
+}
+checkbox.addEventListener("input", onChecked);
+
+// select the input field
+function onFocus() {
+    console.log("Input is focused");
+    itemInput2.style.outlineStyle = "solid";
+    itemInput2.style.outlineColor = "red";
+    itemInput2.style.outlineWidth = "2px";
+
+}
+itemInput2.addEventListener("focus",onFocus);
+
+// unsselect the input field
+function onBlur() {
+    console.log("Input is not focused");
+    itemInput2.style.outlineStyle = "none";
+}
+itemInput2.addEventListener("blur", onBlur);
+
+// react style onChange
+priorityInput.addEventListener("change", onInput);
+
+//======================================================
+// form submit
+// method 1 : normal input data 
+const form =document.getElementById("item-form");
+function onSubmit(e) {
+    console.log("Form was submitted");
+    priority = checkbox.value
+    const item = document.getElementById("item-input").value;
+
+    if (item==="" || priority === "0") {
+        alert("Please enter an item and priority");
+        return
+    }
+    console.log(item, priority);
+}
+form.addEventListener("submit", onSubmit);
+
+//method 2 : FormData object
+function onSubmit2(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const item = formData.get('item');
+    const priority = formData.get("priority");
+    console.log(item, priority);
+    const entries = formData.entries();
+    console.log(entries);
+    for (const entry of entries) {
+        console.log(entry[1]);
+    }
+}
+form.addEventListener("submit", onSubmit2);
+
+
+
+
+
 
